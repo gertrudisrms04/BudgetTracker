@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <img src="header.jpg" alt="header">
+        <h1>Budget Tracker</h1>
+        <h2>Total Saldo: <span id="Saldo">Rp 0</span></h2>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <form id="transaction-form">
+                <select id="category">
+                    <option value="" disabled selected>Pilih Kategori</option>
+                    <option value="Pendapatan">Pendapatan</option>
+                    <option value="Pengeluaran">Pengeluaran</option>
+                </select>
+
+                <select id="deskripsi">
+                    <option value="" disabled selected>Pilih Deskripsi</option>
+                </select>
+
+                <input type="text" id="custom-Deskripsi" placeholder="Isi Deskripsi" style="display: none;">
+                <input type="number" id="amount" placeholder="Jumlah (Rp)">
+
+                <button type="submit">Tambah</button>
+            </form>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="isitabel">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Deskripsi</th>
+                        <th>Kategori</th>
+                        <th>Jumlah (Rp)</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="tabel-transaksi"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
